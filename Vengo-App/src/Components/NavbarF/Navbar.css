@@ -1,0 +1,107 @@
+/* Navbar Container */
+.navbar {
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo */
+.navbar .logo {
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Navbar Menu */
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #49557e;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar-menu li {
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+}
+
+/* Active Menu Item (Underline) */
+.navbar-menu li.active {
+    font-weight: bold;
+    color: tomato;
+    position: relative;
+}
+
+.navbar-menu li.active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -5px;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background-color: tomato;
+    border-radius: 2px;
+}
+
+/* Navbar Right Section */
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Search & Basket Icon */
+.navbar-right img {
+    width: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.navbar-right img:hover {
+    transform: scale(1.1);
+}
+
+/* Basket Icon with Dot */
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    border-radius: 50%;
+}
+
+/* Sign In Button */
+.navbar-button {
+    background: transparent;
+    font-size: 16px;
+    color: #49557e;
+    border: 1px solid tomato;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect for Button */
+.navbar-button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/* Sign In Button (Underline on Click) */
+.navbar-button:active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+}
